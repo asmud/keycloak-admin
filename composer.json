@@ -1,6 +1,6 @@
 {
-    "name": "mohammad-waleed/keycloak-admin-client",
-    "description": "Connect to keycloak admin api easily",
+    "name": "asmud/keycloak-admin",
+    "description": "Connect to keycloak admin api easily - patch onto mohammad-waleed/keycloak-admin-client",
     "type": "library",
     "license": "MIT",
     "require": {
