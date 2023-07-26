@@ -327,7 +327,7 @@ class KeycloakClient extends GuzzleClient
             }
         }
 
-        $stack->push(new RefreshToken($config['token_storage']));
+        $stack->push(new RefreshToken($config['token_storage']), 'add_token');
 
         $config['handler'] = $stack;
 
