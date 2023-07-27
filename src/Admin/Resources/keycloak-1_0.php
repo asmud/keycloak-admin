@@ -5751,5 +5751,136 @@ return array(
             )
         ),
 
+        'login' => array(
+            'uri'         => 'realms/{realm}/protocol/openid-connect/token',
+            'description' => 'Login user',
+            'httpMethod'  => 'POST',
+            'parameters'  => array(
+                'realm' => array(
+                    'location'    => 'uri',
+                    'description' => 'The Realm name',
+                    'type'        => 'string',
+                    'required'    => true,
+                ),
+                'client_id' => array(
+                    'location' => 'formParam',
+                    'description' => 'Client ID',
+                    'type' => 'string',
+                    'required' => true
+                ),
+                'grant_type' => array(
+                    'location' => 'formParam',
+                    'description' => 'Password grant type',
+                    'type' => 'string',
+                    'default' => 'password',
+                    'static' => true
+                ),
+                'username' => array(
+                    'location' => 'formParam',
+                    'description' => 'Username',
+                    'type' => 'string',
+                    'required' => true
+                ),
+                'password' => array(
+                    'location' => 'formParam',
+                    'description' => 'Password for user',
+                    'type' => 'string',
+                    'required' => true
+                ),
+                'client_secret' => array(
+                    'location' => 'formParam',
+                    'description' => 'Client Secret',
+                    'type' => 'string',
+                    'required' => false
+                )
+            )
+        ),
+
+        'clientLogin' => array(
+            'uri'         => 'realms/{realm}/protocol/openid-connect/token',
+            'description' => 'Login user',
+            'httpMethod'  => 'POST',
+            'parameters'  => array(
+                'realm' => array(
+                    'location'    => 'uri',
+                    'description' => 'The Realm name',
+                    'type'        => 'string',
+                    'required'    => true,
+                ),
+                'client_id' => array(
+                    'location' => 'formParam',
+                    'description' => 'Client ID',
+                    'type' => 'string',
+                    'required' => true
+                ),
+                'grant_type' => array(
+                    'location' => 'formParam',
+                    'description' => 'Client Credential grant type',
+                    'type' => 'string',
+                    'default' => 'client_credentials',
+                    'static' => true
+                ),
+                'client_secret' => array(
+                    'location' => 'formParam',
+                    'description' => 'Client Secret',
+                    'type' => 'string',
+                    'required' => false
+                )
+            )
+        ),
+
+        'refreshLogin' => array(
+            'uri'         => 'realms/{realm}/protocol/openid-connect/token',
+            'description' => 'Login user',
+            'httpMethod'  => 'POST',
+            'parameters'  => array(
+                'realm' => array(
+                    'location'    => 'uri',
+                    'description' => 'The Realm name',
+                    'type'        => 'string',
+                    'required'    => true,
+                ),
+                'client_id' => array(
+                    'location' => 'formParam',
+                    'description' => 'Client ID',
+                    'type' => 'string',
+                    'required' => true
+                ),
+                'grant_type' => array(
+                    'location' => 'formParam',
+                    'description' => 'Refresh token grant type',
+                    'type' => 'string',
+                    'default' => 'refresh_token',
+                    'static' => true
+                ),
+                'refresh_token' => array(
+                    'location' => 'formParam',
+                    'description' => 'Refresh Token',
+                    'type' => 'string',
+                    'required' => true
+                ),
+                'client_secret' => array(
+                    'location' => 'formParam',
+                    'description' => 'Client Secret',
+                    'type' => 'string',
+                    'required' => false
+                )
+            )
+        ),
+
+        'userInfo' => array(
+            'uri'         => 'realms/{{realm}}/protocol/openid-connect/userinfo',
+            'description' => 'Get user info',
+            'httpMethod'  => 'POST',
+            'parameters'  => array(
+                'realm' => array(
+                    'location'    => 'uri',
+                    'description' => 'The Realm name',
+                    'type'        => 'string',
+                    'required'    => true,
+                )
+            )
+        )
+
     ) //End of Operations Array
 );//End of return array

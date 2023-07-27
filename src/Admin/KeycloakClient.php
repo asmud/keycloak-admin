@@ -362,6 +362,9 @@ class KeycloakClient extends GuzzleClient
 
     public function getCommand($name, array $params = [])
     {
+    	if (in_array($name, ['login', 'clientLogin', 'refreshLogin']) !== false) {
+    		$this->getConfig('handler')->remove('add_token');
+    	}
         if (!isset($params['realm'])) {
             $params['realm'] = $this->getRealmName();
         }
