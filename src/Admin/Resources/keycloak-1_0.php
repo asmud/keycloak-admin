@@ -5869,7 +5869,7 @@ return array(
         ),
 
         'userInfo' => array(
-            'uri'         => 'realms/{{realm}}/protocol/openid-connect/userinfo',
+            'uri'         => 'realms/{realm}/protocol/openid-connect/userinfo',
             'description' => 'Get user info',
             'httpMethod'  => 'POST',
             'parameters'  => array(
